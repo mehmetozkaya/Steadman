@@ -9,10 +9,17 @@ namespace Steadman.Pages
 {
     public class BookModel : PageModel
     {
+        public string Message { get; set; }
 
         public void OnGet()
         {
 
+        }
+
+        public IActionResult OnPost()
+        {
+
+            return Page();
         }
     }
 }
