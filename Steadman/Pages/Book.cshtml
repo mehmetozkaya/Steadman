@@ -1,0 +1,61 @@
+﻿@page
+@model Steadman.Pages.BookModel
+@{
+    ViewData["Title"] = "Book";
+}
+
+<!-- Header Section Start -->
+<header id="hero-area">
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a asp-page="Index" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="lni-menu"></i>
+            </button>
+            <div class="collapse navbar-collapse menu-white" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="Index">Home</a>
+                    </li>                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- Header Section End -->
+<!-- Page header Start -->
+<section class="page-header">    
+</section>
+<!-- Page header End -->
+
+<!-- Download Section Start -->
+<section id="download" class="section-padding">
+    <div class="container">
+        <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.4s">
+            <div class="col-md-6 col-lg-6 col-sm-12">
+                <div class="download-block">
+                    <form id="downloadForm">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="download-button">
+                                    <button class="btn btn-common" id="form-download" type="submit">Download</button>
+                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Download Section End -->
