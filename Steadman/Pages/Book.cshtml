@@ -44,28 +44,32 @@
     <div class="container">
         <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.4s">
             <div class="col-md-6 col-lg-6 col-sm-12">
-                <div class="download-block">
-                    @*<div class="contact-title">
-                        <h1>Please provide your e-mail</h1>
-                    </div>*@
+                <div class="contact-block">
 
-                    <form id="downloadForm">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <input type="text" placeholder="Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
-                                    <div class="help-block with-errors"></div>
+                    @if (String.IsNullOrWhiteSpace(Model.Message))
+                    {
+                        <form id="downloadForm" method="post">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input asp-for="Mail.MailAddress" type="text" placeholder="Email" id="email" class="form-control" required data-error="Please enter your email">
+                                        <div class="help-block with-errors" style="color:red" asp-validation-summary="All"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="submit-button">
+                                        <button class="btn btn-common" id="form-download" type="submit">Download</button>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="download-button">
-                                    <button class="btn btn-common" id="form-download" type="submit">Download</button>
-                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    }
+                    else
+                    {
+                        <h2>@Model.Message</h2>                        
+                    }
                 </div>
             </div>
         </div>
