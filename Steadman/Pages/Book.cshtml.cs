@@ -5,11 +5,19 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Steadman.Entity;
+using Steadman.Service;
 
 namespace Steadman.Pages
 {
     public class BookModel : PageModel
     {
+        private readonly IMailService _mailService;
+
+        public BookModel(IMailService mailService)
+        {
+            _mailService = mailService ?? throw new ArgumentNullException(nameof(mailService));
+        }
+
         [BindProperty]
         public Mail Mail { get; set; } = new Mail();
 
@@ -23,13 +31,9 @@ namespace Steadman.Pages
         {
             if(ModelState.IsValid)
             {
-                var asd = Mail.CreateTime;
-                var ss = Mail.MailAddress;
-                var ee = Mail.Id;
-
+                _mailService.Insert(Mail);
                 Message = "We thank you for your interest. We will finish the book in a very short time. We will send it to you when we are finished.";
             }
-
 
             return Page();
         }
