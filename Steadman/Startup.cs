@@ -27,9 +27,11 @@ namespace Steadman
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // db connection setup
             services.AddDbContext<SteadmanDataContext>(options =>
                       options.UseSqlServer(Configuration.GetConnectionString("SteadmanConnection")));
 
+            // configure project services
             services.AddScoped<IMailService, MailService>();
 
             services.Configure<CookiePolicyOptions>(options =>
