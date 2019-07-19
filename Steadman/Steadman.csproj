@@ -6,6 +6,10 @@
     <UserSecretsId>934dcaf5-f5a1-45f1-8ffb-4ecf744c7ec6</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="appsettings.Production.json" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
