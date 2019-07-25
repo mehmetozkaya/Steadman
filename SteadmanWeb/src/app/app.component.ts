@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  pageTitle : string = 'Mozk Product Manager'  
+  pageTitle : string = 'Mozk Product and Catalog Manager'  
 }
