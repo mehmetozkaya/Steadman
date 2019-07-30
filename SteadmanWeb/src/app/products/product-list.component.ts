@@ -7,13 +7,18 @@ import { IProduct } from "./product";
     styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-   
+  
+  constructor() {
+    this.filteredProducts = this.products;
+    this.listFilter = 'cart';
+  }
+
     pageTitle: string = 'Product List';
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false;
 
-    _listFilter: string = 'cart';
+    _listFilter: string;
     get listFilter(): string {
       return this._listFilter;
     }
