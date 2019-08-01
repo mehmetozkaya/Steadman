@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { IProduct } from "./product";
+import { ProductService } from "./product.service";
 
 @Component({
     selector: 'pm-products',
@@ -8,9 +9,8 @@ import { IProduct } from "./product";
 })
 export class ProductListComponent implements OnInit {
   
-  constructor() {
-    this.filteredProducts = this.products;
-    this.listFilter = 'cart';
+  constructor(private productService : ProductService) {
+    
   }
 
     pageTitle: string = 'Product List';    
@@ -28,37 +28,14 @@ export class ProductListComponent implements OnInit {
     }
 
     filteredProducts: IProduct[];
-    products: IProduct[] = [
-        {
-            "productId": 1,
-            "productName": "Leaf Rake",
-            "productCode": "GDN-0011",
-            "releaseDate": "March 19, 2016",
-            "description": "Leaf rake with 48-inch wooden handle.",
-            "price": 19.95,
-            "starRating": 3.2,
-            "imageUrl": "https://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
-          },
-          {
-            "productId": 2,
-            "productName": "Garden Cart",
-            "productCode": "GDN-0023",
-            "releaseDate": "March 18, 2016",
-            "description": "15 gallon capacity rolling garden cart",
-            "price": 32.99,
-            "starRating": 4.2,
-            "imageUrl": "https://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
-          }
-    ];
-
-    toggleImage(): void {
-      this.showImage = !this.showImage;
-    }  
+    products: IProduct[] = [];  
 
     ngOnInit(): void {
       console.log('mozkaya');
+      this.products = this.productService.getProducts();
+      this.filteredProducts = this.products;      
     }
-
+    
     performFilter(filterBy: string): IProduct[] {
       filterBy = filterBy.toLocaleLowerCase();
       return this.products.filter((product: IProduct) => 
@@ -68,6 +45,10 @@ export class ProductListComponent implements OnInit {
     onRatingClicked(message: string): void {
       console.log(message);
       this.pageTitle = this.pageTitle + ' ' + message;
+    }
+
+    toggleImage(): void {
+      this.showImage = !this.showImage;
     }
 
 }
