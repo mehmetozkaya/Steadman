@@ -65,7 +65,7 @@ export class ProductListComponent implements OnInit {
               product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
     }
 
-    onNotify(message: string): void {
+    onRatingClicked(message: string): void {
       console.log(message);
       this.pageTitle = this.pageTitle + ' ' + message;
     }
