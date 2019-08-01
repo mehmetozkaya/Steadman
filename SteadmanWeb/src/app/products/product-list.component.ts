@@ -13,7 +13,7 @@ export class ProductListComponent implements OnInit {
     this.listFilter = 'cart';
   }
 
-    pageTitle: string = 'Product List';
+    pageTitle: string = 'Product List';    
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false;
@@ -66,7 +66,8 @@ export class ProductListComponent implements OnInit {
     }
 
     onNotify(message: string): void {
-      
+      console.log(message);
+      this.pageTitle = this.pageTitle + ' ' + message;
     }
 
 }

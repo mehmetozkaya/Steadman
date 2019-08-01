@@ -14,7 +14,7 @@ export class StarComponent implements OnChanges {
 
     onClick(): void {
         console.log('This rating is '+ this.rating);
-        //this.notify.emit('clicked!');
+        this.notify.emit('clicked!');
     }
 
     ngOnChanges(): void {
