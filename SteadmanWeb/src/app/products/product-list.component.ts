@@ -55,7 +55,7 @@ export class ProductListComponent implements OnInit {
       this.showImage = !this.showImage;
     }
 
-    writeDownProductName(): void {
+    writefirstOfProductName(): void {
       if(this.filteredProducts.length > 0) {
         console.log(this.filteredProducts[0].productName);
       }      
