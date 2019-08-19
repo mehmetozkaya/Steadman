@@ -58,7 +58,7 @@ export class ProductListComponent implements OnInit {
     writefirstOfProductName(): void {
       if(this.filteredProducts.length > 0) {
         console.log(this.filteredProducts[0].productName);
-      }      
+      }
     }
 
 }
