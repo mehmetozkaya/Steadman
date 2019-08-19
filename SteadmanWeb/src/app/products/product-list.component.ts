@@ -32,7 +32,7 @@ export class ProductListComponent implements OnInit {
     products: IProduct[] = [];  
 
     ngOnInit(): void {
-      console.log('mozkaya');
+      console.log('aspnetrun-angular');
 
       this.productService.getProducts()
             .subscribe(products => this.products = products,
