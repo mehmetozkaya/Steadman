@@ -1,0 +1,75 @@
+﻿@page
+@{
+    ViewData["Title"] = "Trainings";
+}
+
+<!-- ***** Welcome Area Start ***** -->
+<section class="welcome_area clearfix" id="home" style="height:100px; background-image: url(img/bg-img/welcome-bg.png)">
+</section>
+<!-- ***** Welcome Area End ***** -->
+<!-- ***** AspnetRun Basic RealWorld Start ***** -->
+<section class="mosh-aboutUs-area section_padding_50">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6">
+                <div class="mosh-about-us-content">
+                    <partial name="_BasicPartial" model="@("Training")" />
+
+                    <a asp-page="Contact" class="btn mosh-btn mosh-btn-2 mt-50">Contact Us</a>
+                    <a asp-page="BuyBook" class="btn mosh-btn mosh-btn-2 mt-50">Download Book</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="mosh-about-us-thumb wow fadeInUp" data-wow-delay="0.5s">
+                    <img src="img/bg-img/basic_realworld.gif" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** AspnetRun Basic RealWorld End ***** -->
+<partial name="_DownloadSamplePartial" />
+<!-- ***** AspnetRun Core RealWorld Start ***** -->
+<section class="mosh-aboutUs-area section_padding_50">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6">
+                <div class="mosh-about-us-content">
+                    <partial name="_CorePartial" model="@("Training")" />
+
+                    <a asp-page="Contact" class="btn mosh-btn mosh-btn-2 mt-50">Contact Us</a>
+                    <a asp-page="BuyBook" class="btn mosh-btn mosh-btn-2 mt-50">Download Book</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="mosh-about-us-thumb wow fadeInUp" data-wow-delay="0.5s">
+                    <img src="img/bg-img/core_realworld.gif" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** AspnetRun Core RealWorld End ***** -->
+<partial name="_DownloadSamplePartial" />
+<!-- ***** AspnetRun Core Angular RealWorld Start ***** -->
+<section class="mosh-aboutUs-area section_padding_50">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6">
+                <div class="mosh-about-us-content">
+                    <partial name="_AngularPartial" model="@("Training")" />
+
+                    <a asp-page="Contact" class="btn mosh-btn mosh-btn-2 mt-50">Contact Us</a>
+                    <a asp-page="BuyBook" class="btn mosh-btn mosh-btn-2 mt-50">Download Book</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="mosh-about-us-thumb wow fadeInUp" data-wow-delay="0.5s">
+                    <img src="img/bg-img/core_realworld.gif" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** AspnetRun Core Angular RealWorld End ***** -->
+<partial name="_DownloadSamplePartial" />

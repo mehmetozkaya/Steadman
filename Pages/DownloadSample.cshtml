@@ -1,0 +1,40 @@
+﻿@page
+@model Mosh.Pages.DownloadSampleModel
+@{
+    ViewData["Title"] = "DownloadSample";
+}
+
+<!-- ***** Welcome Area Start ***** -->
+<section class="welcome_area clearfix" id="home" style="height:100px; background-image: url(img/bg-img/welcome-bg.png)">
+</section>
+<!-- ***** Welcome Area End ***** -->
+<!-- ***** Contact Area Start ***** -->
+<section class="contact-area section_padding_100">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Form Area -->
+            <div class="col-12">
+                <div class="contact-form-area">
+                    @if (String.IsNullOrWhiteSpace(Model.Message))
+                    {
+                        <h2>We will send the book via email..</h2>
+                        <form id="downloadForm" method="post">
+                            <div class="row">
+                                <div class="col-12">
+                                    <input asp-for="Mail.MailAddress" type="text" placeholder="Email" id="email" class="form-control" required data-error="Please enter your email" style="font-size:20px;font-style:initial;color:#212529">
+                                    <div class="help-block with-errors" style="color:red" asp-validation-summary="All"></div>
+                                </div>
+                                <button class="btn mosh-btn mt-50" type="submit">Send Sample Book</button>
+                            </div>
+                        </form>
+                    }
+                    else
+                    {
+                        <h2>@Model.Message</h2>
+                    }
+                </div>
+            </div>      
+        </div>
+    </div>
+</section>
+<!-- ***** Contact Area End ***** -->

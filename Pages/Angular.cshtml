@@ -1,0 +1,130 @@
+﻿@page
+@{
+    ViewData["Title"] = "Angular";
+}
+
+<!-- ***** Welcome Area Start ***** -->
+<section class="welcome_area clearfix" id="home" style="height:100px; background-image: url(img/bg-img/welcome-bg.png)">
+</section>
+<!-- ***** Welcome Area End ***** -->
+<!-- ***** AspnetRun Core Angular RealWorld Start ***** -->
+<section class="mosh-aboutUs-area section_padding_50">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6">
+                <div class="mosh-about-us-content">
+                    <partial name="_AngularPartial" model="@("Book")" />                  
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="mosh-about-us-thumb wow fadeInUp" data-wow-delay="0.5s">
+                    <img src="img/bg-img/core_realworld.gif" alt="">
+                </div>
+            </div>
+            <!-- Discover More btn -->
+            <div class="col-12 text-center mt-50">
+                <a asp-page="BuyBook" class="btn mosh-btn-big">Download Book</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** AspnetRun Core Angular RealWorld End ***** -->
+<!-- ***** Features Area Start ***** -->
+<section class="mosh-features-area section_padding_50_20 clearfix">
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-12 col-md-6">
+                <div class="section-heading">
+                    <p>You will get the Job</p>
+                    <h2>Onboarding to Full Stack .Net Core Developer jobs</h2>
+                </div>
+                <div class="features-content">
+                    <p>
+                        This series of books prepared you to real-world jobs in any level. It proceeds with Junior to Full-Stack level. You can start from scratch of asp.net core and onboard yourself the full stack positions of asp.net core jobs or if you have infrastructure of asp.net core, you will be expand your skills with advanced books which include best practices implemented design patterns, clean architecture, SOLID principles etc..
+                    </p>
+                    <!-- Progress Bar Content Area -->
+                    <div class="features-progress-bar mt-50">
+                        <!-- Single Progress Bar -->
+                        <div class="single_progress_bar mb-15 wow fadeInUp" data-wow-delay="0.2s">
+                            <p>Junior .Net Core Developer</p>
+                            <div id="bar1" class="barfiller">
+                                <div class="tipWrap">
+                                    <span class="tip"></span>
+                                </div>
+                                <span class="fill" data-percentage="60"></span>
+                            </div>
+                        </div>
+                        <!-- Single Progress Bar -->
+                        <div class="single_progress_bar mb-15 wow fadeInUp" data-wow-delay="0.4s">
+                            <p>Senior .Net Core Developer</p>
+                            <div id="bar2" class="barfiller">
+                                <div class="tipWrap">
+                                    <span class="tip"></span>
+                                </div>
+                                <span class="fill" data-percentage="80"></span>
+                            </div>
+                        </div>
+                        <!-- Single Progress Bar -->
+                        <div class="single_progress_bar mb-15 wow fadeInUp" data-wow-delay="0.6s">
+                            <p>Full Stack .Net Core Developer</p>
+                            <div id="bar3" class="barfiller">
+                                <div class="tipWrap">
+                                    <span class="tip"></span>
+                                </div>
+                                <span class="fill" data-percentage="100"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature Thumb -->
+    <div class="features-img">
+        <img src="img/bg-img/job.png" alt="" style="bottom:10px">
+    </div>
+</section>
+<!-- ***** Service Area Start ***** -->
+<section class="mosh-more-services-area d-sm-flex clearfix">
+    <div class="single-more-service-area">
+        <div class="more-service-content text-center wow fadeInUp" data-wow-delay=".1s">
+            <img src="img/core-img/trophy.png" alt="">
+            <h4>Github Community</h4>
+            <p>Update repositories with every version of ASP.Net Core and Angular.</p>
+        </div>
+    </div>
+    <div class="single-more-service-area">
+        <div class="more-service-content text-center wow fadeInUp" data-wow-delay=".4s">
+            <img src="img/core-img/edit.png" alt="">
+            <h4>Step by Step Documentation</h4>
+            <p>Update documents in any changes of the repositories with step by step explanation.</p>
+        </div>
+    </div>
+    <div class="single-more-service-area">
+        <div class="more-service-content text-center wow fadeInUp" data-wow-delay=".7s">
+            <img src="img/core-img/video-camera.png" alt="">
+            <h4>RealWorld Design</h4>
+            <p>Use the real-world templates which already using enterprice applications.</p>
+        </div>
+    </div>
+    <div class="single-more-service-area">
+        <div class="more-service-content text-center wow fadeInUp" data-wow-delay="1s">
+            <img src="img/core-img/presentation.png" alt="">
+            <h4>Onboarding Jobs</h4>
+            <p>Preapare for specific asp.net core jobs which include software architecture best practices.</p>
+        </div>
+    </div>
+</section>
+<!-- ***** Service Area End ***** -->
+<!-- ***** Download Button Start ***** -->
+<section class="mosh-aboutUs-area section_padding_50">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Discover More btn -->
+            <div class="col-12 text-center">
+                <a asp-page="BuyBook" class="btn mosh-btn-big">Download Book</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Download Button End ***** -->
